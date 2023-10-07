@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <script>
+        function Factorial()
+        {
+            var number=parseInt(document.getElementById('number').value);
+            var factorial=1;
+
+            if (number<0)
+            {
+                document.getElementById('result').textContent = "Factorial is not defined for negative numbers.";
+            }
+            else
+            {
+                for (var i=1;i<=number;i++)
+                {
+                    factorial*=i;
+                }
+                document.getElementById('result').textContent = `Factorial of ${number} is: ${factorial}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Factorial</h1>
+        Enter a number: <input type="text" id="number"><br><br>
+        <button type="button" onclick="Factorial()">Click here to get the Factorial</button>
+        <p id="result"></p>
+    </center>
+</body>
+</html>

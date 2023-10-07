@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Array Elements</title>
+    <script>
+        function Array()
+        {
+            var numbers = [6,9,13,54,23,54,56,90,100];
+            var disp= "Array elements: ";
+            for (var i=0;i<numbers.length;i++)
+            {
+                disp+=numbers[i];
+                if (i<numbers.length-1)
+                {
+                    disp+=", ";
+                }
+            }
+            document.getElementById('result').textContent=disp;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Array Elements</h1>
+        <button type="button" onclick="Array()">Array</button>
+        <p id="result"></p>
+    </center>
+</body>
+</html>
